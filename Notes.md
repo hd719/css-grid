@@ -214,3 +214,30 @@ Ex. from the website
 ------
 
 # Lesson 12 Notes: minmax
+
+- makes it possible to define the size of a grid track as a minimum to maximum range so that the grid can adapt to the viewport of each user the best possible way
+
+- In our current example we have 
+
+```
+ /* grid-template-columns: repeat(auto-fill, 130px); */
+```
+
+- and because of this the content starts to spill out, so minmax helps figuring out wide the columns should be
+
+Ex.
+```
+grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+```
+
+- here we are setting the min. and the max so the columns will not go below 150px
+
+**Quick Note** 
+
+- Can see the difference between auto fill and auto fit in this example
+
+### fit-content
+
+/* grid-template-columns: fit-content(100px) 150px 150px 150px; */
+
+- able to clamp so the first row will not go below 100px wide
